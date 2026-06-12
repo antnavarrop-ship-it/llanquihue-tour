@@ -1,0 +1,5 @@
+Ruta Frutillar;Gastronómico;45000
+Navegación Lacustre;Paseo;35000
+Volcán Osorno Trekking;Aventura;60000
+Vuelta al Lago;Cultural;28000
+Sabores Locales;Gastronómico;32000
