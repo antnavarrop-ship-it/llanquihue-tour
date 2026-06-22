@@ -14,7 +14,9 @@ public class GestorDatos {
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
             while ((linea = br.readLine()) != null) {
-                if (linea.trim().isEmpty()) continue;
+                if (linea.trim().isEmpty()) {
+                    continue;
+                }
 
                 String[] datos = linea.split(";");
                 if (datos.length == 3) {
@@ -26,7 +28,9 @@ public class GestorDatos {
                 }
             }
         } catch (IOException e) {
-            System.err.println("Error al leer el archivo: " + e.getMessage());
+            System.out.println("Error al leer archivo: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Error en formato de numero: " + e.getMessage());
         }
         return listaTours;
     }
