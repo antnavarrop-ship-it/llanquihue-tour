@@ -1,18 +1,16 @@
 package model;
 
-public class Tour {
-    private String nombre;
-    private String tipo;
+public class Tour extends ServicioTuristico {
     private int precio;
     private Guia guia;
 
     public Tour(String nombre, String tipo, int precio) {
-        this.nombre = nombre;
-        this.tipo = tipo;
+        super(nombre, tipo); // Pasa el nombre y tipo a la superclase ServicioTuristico
         this.precio = precio;
         this.guia = null;
     }
 
+    // Mantenemos tus getters y setters intactos para que no falle nada
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
 
@@ -28,6 +26,7 @@ public class Tour {
     @Override
     public String toString() {
         String datosGuia = (guia != null) ? guia.toString() : "Por asignar";
-        return "Tour: " + nombre + " | Categoría: " + tipo + " | Valor: $" + precio + " | Operación: [" + datosGuia + "]";
+        // Usamos super.toString() para heredar la impresion base de la superclase
+        return super.toString() + " | Valor: $" + precio + " | Operación: [" + datosGuia + "]";
     }
 }
