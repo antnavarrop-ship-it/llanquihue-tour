@@ -9,3 +9,5 @@ Aplicación orientada a objetos diseñada para optimizar la administración y co
 3. Abrir el proyecto en IntelliJ IDEA.
 4. Localizar la clase principal `Main` dentro del paquete de interfaz de usuario (`ui`).
 5. Ejecutar (Run) la clase `Main.java` para desplegar el menú interactivo en la consola del sistema.
+6. ## Actualización Semana 6
+Se incorporó la superclase `ServicioTuristico` para establecer una jerarquía de herencia simple mediante la palabra clave `extends`. Además, se implementó la subclase `RutaGastronomica` para especializar las experiencias gastronómicas, aplicando polimorfismo dinámico en tiempo de ejecución al listar el catálogo.
