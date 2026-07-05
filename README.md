@@ -1,13 +1,14 @@
-# LlanquihueTourApp
+# LlanquihueTourApp - Semana 7
 
-## Descripción del Sistema
-Aplicación orientada a objetos diseñada para optimizar la administración y consulta de rutas turísticas en la Región de Los Lagos. El sistema permite automatizar la carga de datos estructurados desde archivos planos externos hacia colecciones dinámicas en memoria, posibilitando búsquedas rápidas y visualización organizada de las experiencias (como el enfoque en rutas Gastronómicas).
+## Descripción
+Extensión funcional del sistema de la agencia mediante la implementación de colecciones dinámicas y polimorfismo.
 
-## Instrucciones para Ejecución
-1. Asegurarse de tener el entorno configurado con JDK 17 o superior.
-2. Verificar que el archivo de origen de datos se encuentre ubicado exactamente en la ruta: `src/resources/tours.txt`.
-3. Abrir el proyecto en IntelliJ IDEA.
-4. Localizar la clase principal `Main` dentro del paquete de interfaz de usuario (`ui`).
-5. Ejecutar (Run) la clase `Main.java` para desplegar el menú interactivo en la consola del sistema.
-6. ## Actualización Semana 6
-Se incorporó la superclase `ServicioTuristico` para establecer una jerarquía de herencia simple mediante la palabra clave `extends`. Además, se implementó la subclase `RutaGastronomica` para especializar las experiencias gastronómicas, aplicando polimorfismo dinámico en tiempo de ejecución al listar el catálogo.
+## Estructura de Paquetes
+* `model`: Superclase ServicioTuristico y subclases con métodos sobrescritos.
+* `data`: Gestor de servicios que maneja la colección genérica List.
+* `ui`: Punto de entrada del programa para visualización en consola.
+
+## Instrucciones de Ejecución
+1. Clonar el repositorio.
+2. Compilar desde la raíz con: `javac ui/Main.java data/GestorServicios.java model/*.java`
+3. Ejecutar mediante: `java ui.Main`
