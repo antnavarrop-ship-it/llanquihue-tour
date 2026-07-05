@@ -12,7 +12,7 @@ public class ExcursionCultural extends ServicioTuristico {
 
     @Override
     public void mostrarInformacion() {
-        super.super.mostrarInformacion();
+        super.mostrarInformacion(); // ¡Con un solo 'super' para que funcione impecable!
         System.out.println("Tipo: Excursión Cultural");
         System.out.println("Sitio Histórico: " + sitioHistorico);
         System.out.println("¿Incluye Guía?: " + (incluyeGuia ? "Sí" : "No"));
