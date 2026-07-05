@@ -1,6 +1,6 @@
 package model;
 
-public class ServicioTuristico {
+public abstract class ServicioTuristico {
     private String nombreServicio;
     private double precioBase;
 
@@ -12,7 +12,10 @@ public class ServicioTuristico {
     public String getNombreServicio() { return nombreServicio; }
     public double getPrecioBase() { return precioBase; }
 
+    // Este es el método base que heredarán todos los hijos
     public void mostrarInformacion() {
-        System.out.println("Servicio: " + nombreServicio + " | Precio: $" + precioBase);
+        System.out.println("===================================");
+        System.out.println("Servicio: " + nombreServicio);
+        System.out.println("Precio Base: $" + precioBase);
     }
 }
