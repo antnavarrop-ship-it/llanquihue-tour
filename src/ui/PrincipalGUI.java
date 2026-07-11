@@ -8,7 +8,7 @@ public class PrincipalGUI {
     public static void main(String[] args) {
         GestorServicios gestor = new GestorServicios();
 
-        String[] opciones = {"Agregar Guía", "Agregar Vehículo", "Agregar Colaborador", "Ver Todos los Recursos", "Salir"};
+        String[] opciones = {"Agregar Guía", "Agregar Vehículo", "Agregar Colaborador", "Ver Todos los  Recursos", "Salir"};
 
         while (true) {
             int seleccion = JOptionPane.showOptionDialog(null,
