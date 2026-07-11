@@ -12,3 +12,4 @@ Extensión funcional del sistema de la agencia mediante la implementación de co
 1. Clonar el repositorio.
 2. Compilar desde la raíz con: `javac ui/Main.java data/GestorServicios.java model/*.java`
 3. Ejecutar mediante: `java ui.Main`
+4. Semana 8: Se añade soporte para la gestión de recursos de la agencia y menú interactivo GUI.
