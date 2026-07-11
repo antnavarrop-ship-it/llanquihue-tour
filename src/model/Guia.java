@@ -1,27 +1,21 @@
 package model;
 
-public class Guia {
-    private String nombreGuia;
+import javax.swing.JOptionPane;
+
+public class Guia extends RecursoAgencia implements Registrable {
     private String idioma;
     private EmpresaOperadora empresa;
 
-    public Guia(String nombreGuia, String idioma, EmpresaOperadora empresa) {
-        this.nombreGuia = nombreGuia;
+    public Guia(String id, String nombreGuia, String idioma, EmpresaOperadora empresa) {
+        super(id, nombreGuia);
         this.idioma = idioma;
         this.empresa = empresa;
     }
 
-    public String getNombreGuia() { return nombreGuia; }
-    public void setNombreGuia(String nombreGuia) { this.nombreGuia = nombreGuia; }
-
-    public String getIdioma() { return idioma; }
-    public void setIdioma(String idioma) { this.idioma = idioma; }
-
-    public EmpresaOperadora getEmpresa() { return empresa; }
-    public void setEmpresa(EmpresaOperadora empresa) { this.empresa = empresa; }
-
     @Override
-    public String toString() {
-        return nombreGuia + " (Idioma: " + idioma + ") - Operador: " + empresa.getNombreEmpresa();
+    public void mostrarResumen() {
+        JOptionPane.showMessageDialog(null,
+                "[GUÍA INTERNO]\nID: " + id + "\nNombre: " + nombre + "\nIdioma: " + idioma + "\nEmpresa: " + (empresa != null ? empresa.getNombre() : "No asignada"),
+                "Llanquihue Tour - Registro", JOptionPane.INFORMATION_MESSAGE);
     }
 }
