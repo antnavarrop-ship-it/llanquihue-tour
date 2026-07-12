@@ -13,7 +13,7 @@ public class Tour extends ServicioTuristico {
     public String getNombre() { return getNombreServicio(); }
     public void setNombre(String nombre) { /* Mantenido por compatibilidad */ }
 
-    public String getTipo() { return "Tour"; }
+    public String getTipo() { return "Tour General"; }
     public void setTipo(String tipo) { /* Mantenido por compatibilidad */ }
 
     public int getPrecio() { return precio; }
