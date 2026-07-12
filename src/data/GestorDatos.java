@@ -1,5 +1,6 @@
 package data;
 
+import model.ServicioTuristico;
 import model.Tour;
 import model.RutaGastronomica;
 import java.io.BufferedReader;
@@ -9,8 +10,9 @@ import java.util.ArrayList;
 
 public class GestorDatos {
 
-    public ArrayList<Tour> cargarToursDesdeArchivo(String rutaArchivo) {
-        ArrayList<Tour> listaTours = new ArrayList<>();
+    // Cambiado a ArrayList<ServicioTuristico> para permitir el polimorfismo real
+    public ArrayList<ServicioTuristico> cargarToursDesdeArchivo(String rutaArchivo) {
+        ArrayList<ServicioTuristico> listaTours = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))) {
             String linea;
@@ -25,11 +27,10 @@ public class GestorDatos {
                     String tipo = datos[1].trim();
                     int precio = Integer.parseInt(datos[2].trim());
 
-                    // Aplicamos polimorfismo: Si es gastronomico instanciamos la subclase especializada
+                    // Aplicamos polimorfismo sin romper los tipos de datos
                     if (tipo.equalsIgnoreCase("Gastronómico")) {
                         listaTours.add(new RutaGastronomica(nombre, precio, 3, "Cocina Marina"));
                     } else {
-                        // Corregido aquí: Le pasamos "General" en vez de la variable conflictiva
                         listaTours.add(new Tour(nombre, "General", precio));
                     }
                 }
