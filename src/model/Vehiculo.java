@@ -13,7 +13,7 @@ public class Vehiculo extends RecursoAgencia implements Registrable {
     @Override
     public void mostrarResumen() {
         JOptionPane.showMessageDialog(null,
-                "[VEHÍCULO AGENCIA]\nID: " + id + "\nTipo: " + nombre + "\nPatente: " + patente,
+                "[VEHÍCULO AGENCIA]\nID: " + id + "\nTipo: " + getNombreServicio() + "\nPatente: " + patente,
                 "Llanquihue Tour - Registro", JOptionPane.INFORMATION_MESSAGE);
     }
 }
