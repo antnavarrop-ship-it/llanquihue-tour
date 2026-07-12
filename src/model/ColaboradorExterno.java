@@ -13,7 +13,7 @@ public class ColaboradorExterno extends RecursoAgencia implements Registrable {
     @Override
     public void mostrarResumen() {
         JOptionPane.showMessageDialog(null,
-                "[COLABORADOR EXTERNO]\nID: " + id + "\nContacto: " + nombre + "\nEmpresa: " + empresa,
-                "Llanquihue Tour - Registro",  JOptionPane.INFORMATION_MESSAGE);
+                "[COLABORADOR EXTERNO]\nID: " + id + "\nContacto: " + getNombreServicio() + "\nEmpresa: " + empresa,
+                "Llanquihue Tour - Registro", JOptionPane.INFORMATION_MESSAGE);
     }
 }
