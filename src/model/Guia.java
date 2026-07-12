@@ -15,7 +15,7 @@ public class Guia extends RecursoAgencia implements Registrable {
     @Override
     public void mostrarResumen() {
         JOptionPane.showMessageDialog(null,
-                "[GUÍA INTERNO]\nID: " + id + "\nNombre: " + nombre + "\nIdioma: " + idioma + "\nEmpresa: " + (empresa != null ? empresa.getNombre() : "No asignada"),
+                "[GUÍA INTERNO]\nID: " + id + "\nNombre: " + getNombreServicio() + "\nIdioma: " + idioma + "\nEmpresa: " + (empresa != null ? empresa.getNombreEmpresa() : "No asignada"),
                 "Llanquihue Tour - Registro", JOptionPane.INFORMATION_MESSAGE);
     }
 }
