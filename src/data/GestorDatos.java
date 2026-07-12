@@ -1,7 +1,7 @@
 package data;
 
 import model.Tour;
-import model.RutaGastronomica; // Importamos la nueva subclase
+import model.RutaGastronomica;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -27,9 +27,10 @@ public class GestorDatos {
 
                     // Aplicamos polimorfismo: Si es gastronomico instanciamos la subclase especializada
                     if (tipo.equalsIgnoreCase("Gastronómico")) {
-                        listaTours.add(new RutaGastronomica(nombre, tipo, precio, 3));
+                        listaTours.add(new RutaGastronomica(nombre, precio, 3, "Cocina Marina"));
                     } else {
-                        listaTours.add(new Tour(nombre, tipo, precio));
+                        // Corregido aquí: Le pasamos "General" en vez de la variable conflictiva
+                        listaTours.add(new Tour(nombre, "General", precio));
                     }
                 }
             }
