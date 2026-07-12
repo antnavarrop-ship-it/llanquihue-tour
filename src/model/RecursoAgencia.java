@@ -1,14 +1,12 @@
 package model;
 
-public abstract class RecursoAgencia {
+public abstract class RecursoAgencia extends ServicioTuristico {
     protected String id;
-    protected String nombre;
 
     public RecursoAgencia(String id, String nombre) {
+        super(nombre, 0.0); // Pasamos el nombre al ServicioTuristico y precio 0.0
         this.id = id;
-        this.nombre = nombre;
     }
 
     public String getId() { return id; }
-    public String getNombre() { return nombre; }
 }
