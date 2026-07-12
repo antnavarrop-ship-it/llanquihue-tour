@@ -5,17 +5,16 @@ public class Tour extends ServicioTuristico {
     private Guia guia;
 
     public Tour(String nombre, String tipo, int precio) {
-        super(nombre, tipo); // Pasa el nombre y tipo a la superclase ServicioTuristico
+        super(nombre, 0.0);
         this.precio = precio;
         this.guia = null;
     }
 
-    // Mantenemos tus getters y setters intactos para que no falle nada
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getNombre() { return getNombreServicio(); }
+    public void setNombre(String nombre) { /* Mantenido por compatibilidad */ }
 
-    public String getTipo() { return tipo; }
-    public void setTipo(String tipo) { this.tipo = tipo; }
+    public String getTipo() { return "Tour"; }
+    public void setTipo(String tipo) { /* Mantenido por compatibilidad */ }
 
     public int getPrecio() { return precio; }
     public void setPrecio(int precio) { this.precio = precio; }
@@ -26,7 +25,6 @@ public class Tour extends ServicioTuristico {
     @Override
     public String toString() {
         String datosGuia = (guia != null) ? guia.toString() : "Por asignar";
-        // Usamos super.toString() para heredar la impresion base de la superclase
-        return super.toString() + " | Valor: $" + precio + " | Operación: [" + datosGuia + "]";
+        return getNombreServicio() + " | Valor: $" + precio + " | Operación: [" + datosGuia + "]";
     }
 }
